@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """API Design: Pagination module"""
 import csv
-from typing import Tuple
+import math
+from typing import Tuple, List
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
