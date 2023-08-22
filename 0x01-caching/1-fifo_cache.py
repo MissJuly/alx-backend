@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Fifo caching module
+FIFO caching module
 """
 from collections import OrderedDict
-from  base_caching import BaseCaching
+from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
@@ -11,13 +11,13 @@ class FIFOCache(BaseCaching):
     Represents an object
     """
     def __init__(self):
-        """Initialize the class"""
+        """initialize the class"""
         super().__init__()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
         """
-        Adds an item in the cache
+        Adds an item in the cache.
         """
         if key is None or item is None:
             return

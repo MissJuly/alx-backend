@@ -2,7 +2,7 @@
 """
 LIFO module
 """
-from collections import OrderedeDict
+from collections import OrderedDict
 from base_caching import BaseCaching
 
 
@@ -13,7 +13,7 @@ class LIFOCache(BaseCaching):
     def __init__(self):
         """Initializes the cache"""
         super().__init__()
-        self.cache_data = OrderedeDict()
+        self.cache_data = OrderedDict()
 
     def put(self, key, item):
         """
@@ -30,6 +30,6 @@ class LIFOCache(BaseCaching):
 
     def get(self, key):
         """
-        Retrieves an item by key
+        Retrieves an item by key.
         """
         return self.cache_data.get(key, None)
