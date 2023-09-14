@@ -34,7 +34,7 @@ def get_user():
 
 @app.before_request
 def before_request():
-    """Performs some routine before """
+    """Performs some routines before each request """
     user = get_user()
     g.user = user
 
@@ -42,7 +42,7 @@ def before_request():
 @babel.localeselector
 def get_locale():
     """gets the locale for a web page"""
-    queries = request.query_string.decode('utf-8').split('8')
+    queries = request.query_string.decode('utf-8').split('&')
     query_table = dict(map(
         lambda x: (x if '=' in x else '{}='.format(x)).split('='),
         queries,
